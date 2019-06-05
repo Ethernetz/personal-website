@@ -3,7 +3,7 @@ import { Subject } from 'rxjs';
 
 @Injectable({providedIn: 'root'})
 export class ClassesSectionService{
-  private selectedClassIndex: number = 2;
+  private selectedClassIndex: number = -1;
   private selectedClassIndexUpdated = new Subject<number>();
 
   getSelectedClassIndex(){
@@ -12,6 +12,7 @@ export class ClassesSectionService{
 
   selectClass(index: number){
     this.selectedClassIndex = index;
+    console.log('the new selected class index is... ' + this.selectedClassIndex);
     return this.selectedClassIndex;
   }
 

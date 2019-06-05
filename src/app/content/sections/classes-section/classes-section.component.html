@@ -1,4 +1,4 @@
 <app-section-title title="My Classes"></app-section-title>
 <app-class-create></app-class-create>
-<app-class-list *ngIf="selectedClass < 0"></app-class-list>
-<app-project-list *ngIf="selectedClass >= 0"></app-project-list>
+<app-class-list *ngIf="selectedClassIndex == -1"></app-class-list>
+<app-project-list *ngIf="selectedClassIndex >= 0"></app-project-list>

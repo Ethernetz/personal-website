@@ -3,6 +3,7 @@ import { Subscription } from 'rxjs';
 
 import { Project } from '../project.model';
 import { ProjectsService } from '../projects.service';
+import { ClassesSectionService } from '../../classes-section.service';
 
 @Component({
   selector: 'app-project-list',
@@ -15,10 +16,10 @@ export class ProjectListComponent implements OnInit, OnDestroy{
   private projectsSub = Subscription;
   tableHeaders = ['Title', 'Description'];
 
-  constructor(public projectsService: ProjectsService){}
+  constructor(public classesSectionService: ClassesSectionService, public projectsService: ProjectsService){}
 
   ngOnInit(){
-    this.projects = this.projectsService.getProjects(0);
+    this.projects = this.projectsService.getProjects(this.classesSectionService.getSelectedClassIndex());
     // console.log(this.projects);
     // this.projectsSub = this.projectsService.getProjectUpdateListener()
     //   .subscribe((projects: Project[]) => {

@@ -22,6 +22,7 @@ export class ClassListComponent implements OnInit, OnDestroy{
   ) {}
 
   selectClass(classIndex: number){
+    console.log('selecting class with index ' + classIndex)
     this.classesSectionService.selectClass(classIndex);
   }
 

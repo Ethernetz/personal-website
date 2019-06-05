@@ -5,8 +5,8 @@
     </tr>
   </thead>
   <tbody>
-    <tr mdbTableCol *ngFor="let class of classes">
-      <td (click)="selectClass(3)" class="title">{{class.title}}</td>
+    <tr mdbTableCol *ngFor="let class of classes; let i = index;">
+      <td (click)="selectClass(i)" class="title">{{class.title}}</td>
       <td class="description">{{class.description}}</td>
     </tr>
   </tbody>
