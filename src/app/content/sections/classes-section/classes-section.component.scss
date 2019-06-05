@@ -1,0 +1,11 @@
+:host{
+  // allows classes-section to assume height and width of children
+  margin: 0 auto;
+  overflow: hidden;
+  clear: both;
+  content: "";
+  display: block;
+
+  min-height: 500px;
+  background-color: #f6f6f6;
+}

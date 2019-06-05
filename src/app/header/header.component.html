@@ -1,0 +1,5 @@
+<div class="triangle" id="triangle-big" *ngIf="!onMobile"></div>
+<div class="triangle" id="triangle-medium"  *ngIf="!onMobile"></div>
+<div class="triangle" id="triangle-small" *ngIf="!onMobile"></div>
+<app-header-text [ngClass]="onMobile ? 'mobile' : 'desktop'"></app-header-text>
+<app-header-image *ngIf="!onMobile"></app-header-image>

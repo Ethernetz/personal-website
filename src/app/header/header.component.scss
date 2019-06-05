@@ -1,0 +1,65 @@
+app-header-text.mobile{
+  margin: 0 auto;
+  padding: 50px 50px 30px;
+  text-align: center;
+}
+
+app-header-text.desktop{
+  float: left;
+  width: calc(100vw - 550px);
+  padding-left: 100px;
+  padding-top: 12%;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+
+app-header-image{
+  width: 600px;
+  position: absolute;
+  bottom: 0;
+  right: -200px;
+  padding-right: 25px;
+}
+
+:host{
+  // allows app-header to assume height and width of children
+  margin: 0;
+  overflow: hidden;
+  clear: both;
+  content: "";
+  display: block;
+
+  //removes bad bottom spacing
+  font-size: 0;
+}
+
+@media only screen and (min-width: 800px){
+  :host{
+    //allows image to be glued to bottom
+    position: relative;
+    min-height:600px;
+  }
+}
+
+.triangle{
+  position: absolute;
+  bottom: 0;
+  left: -25vw;
+  opacity: 0.25;
+  z-index: -1;
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-color: transparent transparent #d63c37 transparent;
+}
+
+#triangle-big{
+    border-width:0 0 225px 125vw;
+}
+#triangle-medium{
+    border-width:0 0 150px 125vw;
+}
+#triangle-small{
+    border-width:0 0 75px 125vw;
+}

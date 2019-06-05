@@ -1,0 +1,34 @@
+<div class="form-container">
+  <form (submit)="onAddClass(classForm)" #classForm="ngForm">
+    <div class="form-element-container">
+      <div class="md-form">
+        <input
+          mdbInput
+          type="text"
+          class="form-control"
+          id="title"
+          name="title"
+          ngModel>
+        <label for="title">Title</label>
+      </div>
+    </div>
+    <div class="form-element-container">
+      <div class="md-form">
+        <textarea
+          mdbInput
+          type="text"
+          class="md-textarea form-control"
+          id="description"
+          name="description"
+          ngModel>
+        </textarea>
+        <label for="form7">Description</label>
+      </div>
+    </div>
+    <div class="form-element-container">
+      <button
+        type="submit"
+        class="btn btn-elegant">Add Class</button>
+    </div>
+  </form>
+</div>

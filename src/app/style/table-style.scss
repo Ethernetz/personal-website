@@ -1,0 +1,38 @@
+:host {
+  display: block;
+  width: 80%;
+  max-width: 800px;
+  margin: 50px auto;
+}
+
+td.title {
+  vertical-align: top;
+  font-family: 'Noto Serif', serif, bold;
+  font-size: 1.2rem;
+  color: #000;
+  text-align: right;
+}
+
+@media only screen and (min-width: 800px){
+  td.title {
+    min-width: 300px;
+  }
+  td.description {
+    min-width: 500px;
+  }
+}
+
+td.description {
+  font-size: 0.9rem;
+  color: #666666;
+}
+
+p{
+  padding-top: 30px;
+  text-align: center;
+}
+
+tr,
+td {
+  padding: 30px;
+}

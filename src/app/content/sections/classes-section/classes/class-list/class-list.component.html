@@ -1,0 +1,14 @@
+<table mdbTable *ngIf="classes.length > 0" >
+  <thead>
+    <tr>
+      <th *ngFor="let header of tableHeaders" scope="col">{{header}}</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr mdbTableCol *ngFor="let class of classes">
+      <td (click)="selectClass(3)" class="title">{{class.title}}</td>
+      <td class="description">{{class.description}}</td>
+    </tr>
+  </tbody>
+</table>
+<p *ngIf="classes.length <= 0">No classes added yet</p>

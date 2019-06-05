@@ -1,0 +1,14 @@
+<table mdbTable *ngIf="projects.length > 0" >
+  <thead>
+    <tr>
+      <th *ngFor="let header of tableHeaders" scope="col">{{header}}</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr mdbTableCol *ngFor="let project of projects">
+      <td class="title">{{project.title}}</td>
+      <td class="description">{{project.description}}</td>
+    </tr>
+  </tbody>
+</table>
+<p *ngIf="projects.length <= 0">No projects added yet</p>
