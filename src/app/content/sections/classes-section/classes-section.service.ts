@@ -12,7 +12,7 @@ export class ClassesSectionService{
 
   selectClass(index: number){
     this.selectedClassIndex = index;
-    console.log('the new selected class index is... ' + this.selectedClassIndex);
+    this.selectedClassIndexUpdated.next(index);
     return this.selectedClassIndex;
   }
 

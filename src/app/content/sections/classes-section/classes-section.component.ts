@@ -9,15 +9,15 @@ import { ClassesSectionService } from './classes-section.service';
 })
 
 export class ClassesSectionComponent implements OnInit{
-  private selectedClassIndex: number = -1;
+  private selectedClassIndex: number = -1; //Placeholder initial selectedClassIndex until new one given on init from classes-section service
   private selectedClassSub: Subscription;
-
+  
   constructor( public classesSectionService: ClassesSectionService ){}
 
   ngOnInit(){
-    //TODO: find out why selectedClassIndex is dissapearing after subscribing
+ 
     this.selectedClassIndex = this.classesSectionService.getSelectedClassIndex();
-    console.log(this.selectedClassIndex);
+    
     this.selectedClassSub = this.classesSectionService
     .getSelectedClassUpdateListener()
     .subscribe((selectedClassIndex: number) => {

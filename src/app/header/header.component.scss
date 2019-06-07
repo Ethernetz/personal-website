@@ -52,6 +52,7 @@ app-header-image{
   height: 0px;
   border-style: solid;
   border-color: transparent transparent #d63c37 transparent;
+  animation: lift 1.2s;
 }
 
 #triangle-big{
@@ -62,4 +63,10 @@ app-header-image{
 }
 #triangle-small{
     border-width:0 0 75px 125vw;
+}
+
+@keyframes lift {
+  0% {
+    border-bottom-width: 0px;
+  }
 }
