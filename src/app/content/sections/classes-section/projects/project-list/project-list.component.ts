@@ -18,6 +18,11 @@ export class ProjectListComponent implements OnInit, OnDestroy{
 
   constructor(public classesSectionService: ClassesSectionService, public projectsService: ProjectsService){}
 
+  back(){
+    this.classesSectionService.selectClass(-1);
+  }
+
+
   ngOnInit(){
     this.projects = this.projectsService.getProjects(this.classesSectionService.getSelectedClassIndex());
     // console.log(this.projects);
