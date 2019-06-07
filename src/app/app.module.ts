@@ -23,6 +23,8 @@ import { ClassCreateComponent } from './content/sections/classes-section/classes
 import { ClassListComponent } from './content/sections/classes-section/classes/class-list/class-list.component'
 import { ProjectListComponent } from './content/sections/classes-section/projects/project-list/project-list.component'
 
+import { FooterComponent } from './footer/footer.component'
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +36,8 @@ import { ProjectListComponent } from './content/sections/classes-section/project
     ClassesSectionComponent,
     ClassCreateComponent,
     ClassListComponent,
-    ProjectListComponent
+    ProjectListComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
