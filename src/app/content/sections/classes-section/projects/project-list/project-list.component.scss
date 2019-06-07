@@ -1,7 +1,12 @@
 @import '../../../../../style/table-style.scss';
 
+
 i {
     position: relative;
-    top: 50px;
-    left: 50px;
+    top: 43px;
+    left: 60px;
+}
+
+:host{
+    margin-top: 30.5px !important;
 }
