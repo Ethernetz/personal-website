@@ -21,6 +21,7 @@ import { SectionTitleComponent } from './content/sections/section-title/section-
 import { ClassesSectionComponent } from './content/sections/classes-section/classes-section.component'
 import { ClassCreateComponent } from './content/sections/classes-section/classes/class-create/class-create.component'
 import { ClassListComponent } from './content/sections/classes-section/classes/class-list/class-list.component'
+import { ProjectCreateComponent } from './content/sections/classes-section/projects/project-create/project-create.component'
 import { ProjectListComponent } from './content/sections/classes-section/projects/project-list/project-list.component'
 
 import { FooterComponent } from './footer/footer.component'
@@ -36,7 +37,9 @@ import { FooterComponent } from './footer/footer.component'
     ClassesSectionComponent,
     ClassCreateComponent,
     ClassListComponent,
+    ProjectCreateComponent,
     ProjectListComponent,
+
     FooterComponent
   ],
   imports: [

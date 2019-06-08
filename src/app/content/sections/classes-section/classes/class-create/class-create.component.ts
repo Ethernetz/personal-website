@@ -11,9 +11,6 @@ import { ClassesService } from '../classes.service'
 })
 
 export class ClassCreateComponent {
-  enteredTitle = '';
-  enteredDescription = '';
-  @Output() classCreated = new EventEmitter<Class>();
 
   constructor(public classesService: ClassesService) {}
 

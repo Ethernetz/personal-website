@@ -22,7 +22,7 @@ constructor(public classesService: ClassesService){}
     return this.projectsUpdated.asObservable();
   }
 
-  addProject(classIndex: number, project: Project) {
+  addProject(projectTitle: string, projectDescription: string, projectClassIndex: number) {
     return null;
   }
 
