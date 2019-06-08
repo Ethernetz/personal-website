@@ -13,7 +13,7 @@ import { ClassesSectionService } from '../../classes-section.service';
 
 export class ProjectListComponent implements OnInit, OnDestroy{
   projects: Project[] = [];
-  private projectsSub = Subscription;
+  private projectsSub: Subscription;
   tableHeaders = ['Title', 'Description'];
 
   constructor(public classesSectionService: ClassesSectionService, public projectsService: ProjectsService){}
@@ -25,14 +25,13 @@ export class ProjectListComponent implements OnInit, OnDestroy{
 
   ngOnInit(){
     this.projects = this.projectsService.getProjects(this.classesSectionService.getSelectedClassIndex());
-    // console.log(this.projects);
-    // this.projectsSub = this.projectsService.getProjectUpdateListener()
-    //   .subscribe((projects: Project[]) => {
-    //     this.projects = projects;
-    //   });
+    this.projectsSub = this.projectsService.getProjectUpdateListener()
+      .subscribe((projects: Project[]) => {
+        this.projects = projects;
+      });
   }
 
   ngOnDestroy(){
-    // this.projectsSub.unsubscribe();
+    this.projectsSub.unsubscribe();
   }
 }

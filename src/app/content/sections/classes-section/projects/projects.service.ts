@@ -22,8 +22,11 @@ constructor(public classesService: ClassesService){}
     return this.projectsUpdated.asObservable();
   }
 
-  addProject(projectTitle: string, projectDescription: string, projectClassIndex: number) {
-    return null;
+  addProject(title: string, description: string, classIndex: number) {
+    console.log('here');
+    const newProject: Project = {title: title, description: description}
+    this.classesService.addProject(newProject, classIndex);
+    this.projectsUpdated.next(this.getProjects(classIndex))
   }
 
 }

@@ -52,4 +52,8 @@ export class ClassesService{
     this.classesUpdated.next([...this.classes])
   }
 
+  addProject(project: Project, classIndex: number){
+    this.classes[classIndex].projects.push(project)
+  }
+
 }
