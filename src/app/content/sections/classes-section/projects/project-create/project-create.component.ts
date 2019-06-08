@@ -5,7 +5,7 @@ import { ProjectsService } from '../projects.service';
 import { ClassesSectionService } from '../../classes-section.service';
 
 @Component({
-    template: 'app-project-create',
+    selector: 'app-project-create',
     templateUrl: './project-create.component.html',
     styleUrls: ['./project-create.component.scss']
 })

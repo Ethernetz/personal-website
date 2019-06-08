@@ -39,7 +39,6 @@ import { FooterComponent } from './footer/footer.component'
     ClassListComponent,
     ProjectCreateComponent,
     ProjectListComponent,
-
     FooterComponent
   ],
   imports: [

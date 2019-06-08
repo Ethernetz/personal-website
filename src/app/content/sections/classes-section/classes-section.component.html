@@ -6,8 +6,6 @@
 </div>
 
 <div *ngIf="selectedClassIndex >= 0">
-     
-        <app-project-list *ngIf="selectedClassIndex >= 0"></app-project-list>
+        <app-project-create></app-project-create>
+        <app-project-list></app-project-list>
 </div>
-
-<app-project-create></app-project-create>
