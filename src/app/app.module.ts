@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http'
 
 import {
   MDBBootstrapModule,
@@ -18,11 +19,6 @@ import { HeaderImageComponent } from './header/header-image/header-image.compone
 
 import { ContentComponent } from './content/content.component'
 import { SectionTitleComponent } from './content/sections/section-title/section-title.component'
-import { ClassesSectionComponent } from './content/sections/classes-section/classes-section.component'
-import { ClassCreateComponent } from './content/sections/classes-section/classes/class-create/class-create.component'
-import { ClassListComponent } from './content/sections/classes-section/classes/class-list/class-list.component'
-import { ProjectCreateComponent } from './content/sections/classes-section/projects/project-create/project-create.component'
-import { ProjectListComponent } from './content/sections/classes-section/projects/project-list/project-list.component'
 
 import { FooterComponent } from './footer/footer.component'
 
@@ -34,17 +30,13 @@ import { FooterComponent } from './footer/footer.component'
     HeaderImageComponent,
     ContentComponent,
     SectionTitleComponent,
-    ClassesSectionComponent,
-    ClassCreateComponent,
-    ClassListComponent,
-    ProjectCreateComponent,
-    ProjectListComponent,
     FooterComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    HttpClientModule,
     MDBBootstrapModule.forRoot(),
     InputsModule.forRoot(),
     WavesModule.forRoot(),
